@@ -1,19 +1,19 @@
 {
   "name": "log-chainable",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A JS log wrapper that makes defining namespaces easy with method chaining",
   "keywords": [
-      "chainable",
-      "debug",
-      "debugging",
-      "log",
-      "logger",
-      "logging",
-      "namespaces",
-      "namespacing",
-      "util",
-      "utility",
-      "utils"
+    "chainable",
+    "debug",
+    "debugging",
+    "log",
+    "logger",
+    "logging",
+    "namespaces",
+    "namespacing",
+    "util",
+    "utility",
+    "utils"
   ],
   "main": "index.js",
   "scripts": {
