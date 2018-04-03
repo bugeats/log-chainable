@@ -1,6 +1,6 @@
 # log-chainable
 
-A utility for organizing javascript log statements into namespaces. Why? Because reading pages random logs sucks, and you're too lazy/smart to annotate each statement.
+A utility for organizing javascript log statements into namespaces. Why? Because reading pages of random logs sucks, and you're too lazy/smart to annotate each statement.
 
 ## Installation
 
@@ -23,9 +23,9 @@ Using namespaces:
 ```javascript
 const log = require('log-chainable');
 
-log.namespace('greetings').namespace('family');
+const logFamily = log.namespace('greetings').namespace('family');
 
-log('hi mom'); // [info] (greetings.family) hi mom
+logFamily('hi mom'); // [info] (greetings.family) hi mom
 ```
 
 Namespaces are smart:
@@ -35,9 +35,29 @@ Namespaces are smart:
 
 const log = require('log-chainable');
 
-log.namespace('myApp', 'utils', module);
+const logGreeter = log.namespace('myApp', 'utils', module); 
+logGreeter('greetings'); // [info] (myApp.utils.greeter) greetings
+```
 
-log('hi mom'); // [info] (myApp.utils.greeter) hi mom
+Be concise:
+
+```javascript
+// greeter.js
+
+const log = require('log-chainable').namespace('myApp', 'utils', module);
+
+class MyClass {
+    constructor () {
+        this.log = log.namespace(this);
+    }
+
+    doThatThing () {
+        this.log('done doing that thing');
+    }
+}
+
+const myInstance = new MyClass();
+myInstance.doThatThing() // [info] (myApp.utils.greeter.MyClass) done doing that thing
 ```
 
 
