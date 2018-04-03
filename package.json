@@ -1,0 +1,27 @@
+{
+  "name": "log-chainable",
+  "version": "0.1.0",
+  "description": "A JS log wrapper that makes defining namespaces easy with method chaining",
+  "main": "index.js",
+  "scripts": {
+    "check": "eslint ./lib/**/**/**/**/*.js",
+    "test": "NODE_ENV=test tape index.test.js ./lib/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugeats/log-chainable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bugeats/log-chainable/issues"
+  },
+  "homepage": "https://github.com/bugeats/log-chainable#readme",
+  "devDependencies": {
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "strip-ansi": "^4.0.0"
+  }
+}
