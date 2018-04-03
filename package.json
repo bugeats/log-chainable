@@ -1,6 +1,6 @@
 {
   "name": "log-chainable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A JS log wrapper that makes defining namespaces easy with method chaining",
   "main": "index.js",
   "scripts": {
