@@ -18,7 +18,9 @@
   "main": "index.js",
   "scripts": {
     "check": "eslint ./lib/**/**/**/**/*.js",
-    "test": "NODE_ENV=test tape index.test.js ./lib/*.test.js"
+    "test": "npm run test:node && npm run test:browser",
+    "test:node": "NODE_ENV=test tape index.test.js ./lib/*.test.js",
+    "test:browser": "browserify index.test.js ./lib/*.test.js | tape-run"
   },
   "repository": {
     "type": "git",
@@ -31,7 +33,9 @@
   },
   "homepage": "https://github.com/bugeats/log-chainable#readme",
   "devDependencies": {
-    "tape": "^4.10.1"
+    "browserify": "^16.3.0",
+    "tape": "^4.10.1",
+    "tape-run": "^6.0.0"
   },
   "dependencies": {
     "chalk": "^2.4.2",
