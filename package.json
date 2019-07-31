@@ -19,8 +19,9 @@
   "scripts": {
     "check": "eslint ./lib/**/**/**/**/*.js",
     "test": "npm run test:node && npm run test:browser",
-    "test:node": "NODE_ENV=test tape index.test.js ./lib/*.test.js",
     "test:browser": "browserify index.test.js ./lib/*.test.js | tape-run",
+    "test:node": "NODE_ENV=test tape index.test.js ./lib/*.test.js",
+    "test:one": "NODE_ENV=test tape",
     "test:webpack": "webpack --config webpack.test.config.js"
   },
   "repository": {
