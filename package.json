@@ -39,8 +39,8 @@
     "glob": "^7.1.6",
     "tape": "^4.13.2",
     "tape-run": "^7.0.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "webpack-tape-run": "0.0.7"
   },
   "dependencies": {
